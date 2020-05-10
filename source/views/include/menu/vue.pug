@@ -1,0 +1,42 @@
+
+link(href='/res/css/menu.css' rel='stylesheet')
+
+script.
+
+    let data = JSON.parse('#{ dataStr }'.replace(/&quot;/g, '\"'));
+
+    new Vue({
+        el: '#mainMenu',
+        data: {
+            menu: data.menu,
+            languageList: data.languageList,
+            languageSelected: data.languageSelected
+        },
+        created: function() {
+
+            $(document).ready(() => {});
+
+        },
+        methods: {
+            
+            redirection: function (url) {
+                window.location.href = url;
+            },
+
+            getTranslation: function (event) {
+
+                $.when(
+                    $.ajax({
+                        url: '/lang/' + event.currentTarget.value,
+                        type: 'POST',
+                        success: (data) => {
+                            return data;
+                        }
+                    })
+                )
+                .then(data => {
+                    window.location.reload(true);
+                });
+            }
+        }
+    })

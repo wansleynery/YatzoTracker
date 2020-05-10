@@ -1,0 +1,122 @@
+:root body #container #headContainer {
+  height: 70px;
+  width: 100%;
+  display: flex;
+}
+:root body #container #headContainer #title {
+  float: left;
+  margin: 0 25px;
+  height: 100%;
+  line-height: 70px;
+  width: calc(85% - 50px);
+  align-self: center;
+  overflow: hidden;
+}
+:root body #container #headContainer #liveTitle {
+  float: left;
+  margin: 0;
+  height: 100%;
+  width: 15%;
+  display: flex;
+}
+:root body #container #headContainer #liveTitle > h5 {
+  margin: 0 20px 15px 0;
+  align-self: flex-end;
+  width: calc(100% - 20px);
+  font-size: 11px;
+  text-align: right;
+  color: #dc143c !important;
+}
+:root body #container .subtitle {
+  float: left;
+  margin: 10px 0 15px 20px;
+  height: calc(100% - 40px);
+  width: calc(100% - 30px);
+  font-size: 20px;
+}
+:root body #container .progressContainer {
+  float: left;
+  margin: 10px 20px;
+  height: 50px;
+  width: calc(100% - 40px);
+  background-color: rgba(220,53,69,0.1);
+  border-radius: 5px;
+}
+:root body #container .progressContainer .progressLabelContainer {
+  position: relative;
+  width: 100%;
+}
+:root body #container .progressContainer .progressLabelContainer .progressLabelLeft {
+  float: left;
+  line-height: 50px;
+  margin-left: 20px;
+  width: calc(50% - 20px);
+  z-index: 13 !important;
+}
+:root body #container .progressContainer .progressLabelContainer .progressLabelRight {
+  float: left;
+  line-height: 50px;
+  margin-right: 20px;
+  text-align: right;
+  width: calc(50% - 20px);
+  z-index: 13 !important;
+}
+:root body #container .progressContainer #progressStatus {
+  float: left;
+  min-width: 1%;
+  margin-top: -50px;
+  height: 100%;
+  border-radius: 5px;
+  background-color: rgba(220,53,69,0.9);
+  z-index: -1 !important;
+}
+:root body #container #leftMinorStats {
+  margin: 10px 20px;
+  float: left;
+  width: calc(50% - 40px);
+}
+:root body #container #leftMinorStats .leftMinorStatsName {
+  margin: 10px 15px;
+  float: left;
+  width: calc(60% - 30px);
+}
+:root body #container #leftMinorStats .leftMinorStatsValue {
+  margin: 10px 15px;
+  float: left;
+  width: calc(40% - 30px);
+}
+:root body #container #leftMinorStats .leftMinorStatsValue > p {
+  text-align: right;
+}
+:root body #container #rightMinorStats {
+  margin: 10px 20px;
+  float: left;
+  width: calc(50% - 40px);
+}
+:root body #container #rightMinorStats .rightMinorStatsName {
+  margin: 10px 15px;
+  float: left;
+  width: calc(60% - 30px);
+}
+:root body #container #rightMinorStats .rightMinorStatsValue {
+  margin: 10px 15px;
+  float: left;
+  width: calc(40% - 30px);
+}
+:root body #container #rightMinorStats .rightMinorStatsValue > p {
+  text-align: right;
+}
+:root body #container .sectionSeparator {
+  float: left;
+  width: 100%;
+  height: 1px;
+  margin: 20px 0;
+  background-color: rgba(220,53,69,0.1);
+}
+:root body #container .subsectionSeparator {
+  float: left;
+  width: 80%;
+  height: 1px;
+  background-color: rgba(0,0,0,0.125);
+  margin: 10px 10%;
+}

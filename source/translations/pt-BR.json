@@ -1,0 +1,75 @@
+{
+    "app":
+    {
+        "name": "Rastreador Yatzo",
+        "originalName": "YatzoTracker",
+        "language": "pt-BR",
+        "": ""
+    },
+    "title":
+    {
+        "epidemyCases": "Estatísticas de $epidemy em $region",
+        "epidemyTracker": "Rastreador de Epidemias",
+        "": ""
+    },
+    "label":
+    {
+        "liveUpdate": "TEMPO REAL",
+        "percentage": "Porcentagem",
+        "statistics": "Estatísticas",
+        "menu": {
+            "home": "Início",
+            "epidemies": "Epidemias"
+        },
+        "summary":
+        {
+            "total_cases": "Total de Casos",
+            "active_cases": "Casos Confirmados",
+            "deaths": "Número de Baixas",
+            "recovered": "Casos Recuperados",
+            "critical": "Casos Críticos",
+            "tested": "Casos Testados",
+            "death_ratio": "Taxa de Mortalidade",
+            "recovery_ratio": "Taxa de Recuperação"
+        },
+        "general": "Geral",
+        "epidemy": "Epidemia",
+        "region": "Região",
+        "period": "Período",
+        "periods":
+        {
+            "daily": "Diário",
+            "weekly": "Semanal",
+            "monthly": "Mensal",
+            "annually": "Anualmente"
+        },
+        "submit": "Enviar",
+        "error": "Erro",
+        "": ""
+    },
+    "message":
+    {
+        "frontend": {
+            "error": {
+                "pageNotFound": "Esta página não foi encontrada. Tente novamente!"
+            },
+            "advise": {
+                "redirectingToHome": "Redirecionando para a tela principal em instantes..."
+            },
+            "confirmation": {
+                "": ""
+            }
+        },
+        "backend": {
+            "error": {
+                "fileWithoutUrlTarget": "Insira uma URL de destino para o arquivo"
+            },
+            "advise": {
+                "": ""
+            },
+            "confirmation": {
+                "": ""
+            }
+        }
+    }
+}

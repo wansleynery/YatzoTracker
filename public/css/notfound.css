@@ -1,0 +1,16 @@
+#title {
+  float: left;
+  margin: 0 25px;
+  height: 100%;
+  line-height: 70px;
+  width: calc(85% - 50px);
+  align-self: center;
+  overflow: hidden;
+}
+.subtitle {
+  float: left;
+  margin: 10px 0 15px 20px;
+  height: calc(100% - 40px);
+  width: calc(100% - 30px);
+  font-size: 20px;
+}

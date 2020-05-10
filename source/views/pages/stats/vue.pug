@@ -1,0 +1,33 @@
+
+link(href='/res/css/stats.css' rel='stylesheet')
+
+script.
+
+    new Vue({
+        el: '#statsApp',
+        data: {
+            // Data itself incoming from router
+            // Used this to may add new variables
+            ...JSON.parse('#{ dataStr }'.replace(/&quot;/g, '\"'))
+        },
+        created: function() {
+
+            $(document).ready();
+
+        },
+        methods: {
+
+            submit: function () {
+
+                let epidemy = $('#epidemySelect').val();
+                let region = $('#regionSelect').val();
+                let period = $('#periodSelect').val();
+
+                let url = '/stats/' + epidemy + '/' + region;
+
+                window.location.href = url;
+
+            }
+
+        }
+    })

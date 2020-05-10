@@ -1,0 +1,33 @@
+
+#homeApp
+
+    #homeBackgroud
+
+        #homeCentralContainer
+
+            #homeCentralTopMinorContainer
+                h3#homeTitle {{ language.app.name }}
+                h6#homeSubtitle {{ language.title.epidemyTracker.concat(' (' + language.app.originalName + ')') }}
+                div#globeSpinImg(style="background-image: url('/res/image/earth-spinning-rotating-animation-41.gif');")
+
+            #homeCentralBottomMinorContainer
+
+                h4.selectLabel {{ language.label.epidemy }}
+
+                input.homeSelect#epidemySelect(list="epidemyDatalist")
+                datalist#epidemyDatalist
+                    option(v-for="item in epidemyList" :value="item.epidemy.toUpperCase()")
+
+                h4.selectLabel {{ language.label.region }}
+
+                input.homeSelect#regionSelect(list="regionDatalist")
+                datalist#regionDatalist
+                    option(v-for="item in Object.keys(regionList)" :value="item.toUpperCase()")
+
+                h4.selectLabel {{ language.label.period }}
+                select.homeSelect#periodSelect
+                    option(v-for="(item, index) in periodList" :value="index") {{ item }}
+
+                #homeSubmit(@click="submit") {{ language.label.submit }}
+
+include ./vue

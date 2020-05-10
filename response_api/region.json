@@ -1,0 +1,43 @@
+{
+    "status": 200,
+    "type": "stack",
+    "data": {
+        "summary": {
+            "total_cases": 1093198,
+            "active_cases": 877624,
+            "deaths": 63790,
+            "recovered": 151784,
+            "critical": 15226,
+            "tested": 6335505,
+            "death_ratio": 0.058351735001344676,
+            "recovery_ratio": 0.13884401544825364
+        },
+        "change": {
+            "total_cases": 29847,
+            "active_cases": 23005,
+            "deaths": 2172,
+            "recovered": 4670,
+            "critical": -3445,
+            "tested": 207493,
+            "death_ratio": 0.00040473537469270376,
+            "recovery_ratio": 0.0004945899057940129
+        },
+        "spots": {
+            "2020-04-30 22:20:00": {
+                "name": "US",
+                "date": {
+                    "date": "2020-04-30 22:20:00.000000",
+                    "timezone_type": 3,
+                    "timezone": "UTC"
+                },
+                "total_cases": 1093198,
+                "deaths": 63790,
+                "recovered": 151784,
+                "critical": 15226,
+                "tested": 6335505,
+                "death_ratio": 0.058351735001344676,
+                "recovery_ratio": 0.13884401544825364
+            }
+        }
+    }
+}

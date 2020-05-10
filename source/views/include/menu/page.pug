@@ -1,0 +1,11 @@
+
+#mainMenu
+
+    #menuOptionsManager(v-for="(item, index) in menu")
+        .optionMainMenu(@click='redirection(item.link)') {{ item.title }}
+        .optionMainMenuSeparator(v-if="index < menu.length - 1")
+
+    select#languageSelect(@change="getTranslation($event)")
+        option(v-for="item in languageList" :selected="item === languageSelected" :value="item") {{ item }}
+
+include ./vue

@@ -1,0 +1,53 @@
+
+link(href='/res/css/home.css' rel='stylesheet')
+
+script.
+
+    let anyData = '#{ dataStr }'
+    anyData = anyData.replace(/&quot;/g, '\"')
+    
+    new Vue({
+        el: '#homeApp',
+        data: {
+
+            // Data itself incoming from router
+            // Used this to may add new variables
+            ...JSON.parse(anyData)
+
+        },
+        created: function() {
+
+            $(document).ready(() => {
+
+                let reloadPage = setInterval(() => {
+
+                    if (this.epidemyList.length < 1) {
+                        window.location.reload(true);
+                    }
+                    else if (this.regionList.length < 1) {
+                        window.location.reload(true);
+                    }
+                    else {
+                        clearInterval(reloadPage);
+                        $('#epidemySelect').val(this.epidemyList[0].epidemy.toUpperCase());
+                        $('#regionSelect').val((Object.keys(this.regionList)[0].toUpperCase()));
+                    }
+                }, 1000);
+            });
+        },
+        methods: {
+
+            submit: function () {
+
+                let epidemy = $('#epidemySelect').val();
+                let region = $('#regionSelect').val();
+                let period = $('#periodSelect').val();
+
+                let url = '/stats/' + epidemy + '/' + region + '/' + period;
+
+                window.location.href = url;
+
+            }
+
+        }
+    });

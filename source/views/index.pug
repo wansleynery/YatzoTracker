@@ -1,0 +1,25 @@
+
+include ./include/head/page
+
+body
+    include ./include/header/page
+    include ./include/menu/page
+        
+    #container
+
+        //- Statistics
+        if root.page === 'STATS'
+            include ./pages/stats/page
+
+        //- Another page
+            else if root.page === 'page'
+                include ./pages/**.pug
+
+        //- Home
+        else if root.page === 'HOME'
+            include ./pages/home/page
+
+        else
+            include ./pages/notfound/page
+
+    include ./include/footer/page

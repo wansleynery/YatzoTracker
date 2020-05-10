@@ -1,0 +1,75 @@
+{
+    "app":
+    {
+        "name": "Yatzo Tracker",
+        "originalName": "YatzoTracker",
+        "language": "en-US",
+        "": ""
+    },
+    "title":
+    {
+        "epidemyCases": "Statistics of $epidemy from $region",
+        "epidemyTracker": "Epidemy Tracker",
+        "": ""
+    },
+    "label":
+    {
+        "liveUpdate": "LIVE",
+        "percentage": "Percentage",
+        "statistics": "Statistics",
+        "menu": {
+            "home": "Home",
+            "epidemies": "Epidemy"
+        },
+        "summary":
+        {
+            "total_cases": "Total of Cases",
+            "active_cases": "Active Cases",
+            "deaths": "Number de Deaths",
+            "recovered": "Recovered Cases",
+            "critical": "Critical Cases",
+            "tested": "Tested Cases",
+            "death_ratio": "Desth Rate",
+            "recovery_ratio": "Recovering Rate"
+        },
+        "general": "General",
+        "epidemy": "Epidemy",
+        "region": "Region",
+        "period": "Period",
+        "periods":
+        {
+            "daily": "Daily",
+            "weekly": "Weekly",
+            "monthly": "Monthly",
+            "annually": "Annually"
+        },
+        "submit": "Send",
+        "error": "Error",
+        "": ""
+    },
+    "message":
+    {
+        "frontend": {
+            "error": {
+                "pageNotFound": "This page was not found. Try again!"
+            },
+            "advise": {
+                "redirectingToHome": "Redirecting to main page in some instants..."
+            },
+            "confirmation": {
+                "": ""
+            }
+        },
+        "backend": {
+            "error": {
+                "fileWithoutUrlTarget": "Insert a target URL to the file options"
+            },
+            "advise": {
+                "": ""
+            },
+            "confirmation": {
+                "": ""
+            }
+        }
+    }
+}

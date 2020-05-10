@@ -1,0 +1,57 @@
+
+#statsApp
+
+    #headContainer
+
+        h2#title {{ language.title.epidemyCases.replace('$epidemy', epidemy).replace('$region', region.toUpperCase()) }}
+
+        #liveTitle
+            h5.blink &bull; {{ language.label.liveUpdate }}
+
+    .sectionSeparator
+
+    .subtitle {{ language.label.percentage }}
+
+    .progressContainer(v-for="(item, index) in progressStats" :key="item.name")
+
+        .progressLabelContainer
+            strong.progressLabelLeft {{ item.name }}
+            strong.progressLabelRight {{ parseFloat(item.value).toLocaleString() }} ({{ parseFloat((parseFloat(item.value) / parseFloat(maxSample)) * 100).toFixed(1) }}%)
+
+        #progressStatus(:style="`width: ${ ((parseFloat(item.value) / parseFloat(maxSample)) * 100) }% !important;`")
+        
+        .subsectionSeparator(v-if="index != progressStats.length - 1")
+
+    .sectionSeparator
+
+    .subtitle {{ language.label.statistics }}
+
+    #leftMinorStats
+
+        h5 {{ language.label.general }}
+
+        .leftMinorStatsName
+
+            p(v-for="(item, index) in majorStats") {{ item.name }}
+        
+        .leftMinorStatsValue
+
+            p(v-for="(item, index) in majorStats") {{ item.value }}
+
+    #rightMinorStats
+
+        h5 {{ language.label.periods.daily }}
+
+        .rightMinorStatsName
+
+            p(v-for="(item, index) in dailyStats") {{ item.name }}
+        
+        .rightMinorStatsValue
+
+            p(v-for="(item, index) in dailyStats") {{ item.value }}
+
+    .sectionSeparator
+
+    #svgMap
+
+    include ./vue

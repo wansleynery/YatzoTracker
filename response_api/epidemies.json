@@ -1,0 +1,12 @@
+[
+    {
+        "epidemy": "Corona Virus",
+        "bioAgent": "COVID-19",
+        "hasCure": false
+    },
+    {
+        "epidemy": "Spanish Fever",
+        "bioAgent": "Virus",
+        "hasCure": true
+    }
+]

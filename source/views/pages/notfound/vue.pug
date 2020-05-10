@@ -1,0 +1,40 @@
+
+link(href='/res/css/notfound.css' rel='stylesheet')
+
+script.
+
+    let anyData = '#{ dataStr }'
+    anyData = anyData.replace(/&quot;/g, '\"')
+    
+    new Vue({
+        el: '#notFoundApp',
+        data: {
+
+            // Data itself incoming from router
+            // Used this to may add new variables
+            ...JSON.parse(anyData)
+
+        },
+        created: function() {
+
+            $(document).ready(() => {
+                let elem = document.getElementById("myBar");
+                let width = 1;
+                let id = setInterval(frame, 50);
+
+                function frame() {
+                    if (width >= 100) {
+                        clearInterval(id);
+                        window.location.href = "/";
+                    } else {
+                        width++;
+                        elem.style.width = width + '%';
+                    }
+                }
+            });
+
+        },
+        methods: {
+            
+        }
+    });
